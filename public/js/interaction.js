@@ -1,41 +1,35 @@
+/**
+ * Constructor for interaction.
+ */
+var stateMap;
+function InteractionInit(the_stateMap) {
+    stateMap = the_stateMap;
+};
+
 $(document).ready(function() {
     $("#dataSelectorButton1").click(function() {
-        alert("Handler for .click() called.");
+        stateMap.betterUpdate(2010, "seatbelt_avg");
     });
-});
-$(document).ready(function() {
     $("#dataSelectorButton2").click(function() {
-        alert("Handler for .click() called.");
+        stateMap.betterUpdate(2010, "exercise_avg");
     });
-});
-$(document).ready(function() {
     $("#dataSelectorButton3").click(function() {
-        alert("Handler for .click() called.");
+        stateMap.betterUpdate(2010, "smoke_avg");
     });
-});
-$(document).ready(function() {
     $("#dataSelectorButton4").click(function() {
-        alert("Handler for .click() called.");
+        stateMap.betterUpdate(2010, "drink_avg");
     });
-});
-$(document).ready(function() {
     $("#dataSelectorButton5").click(function() {
-        alert("Handler for .click() called.");
+        stateMap.betterUpdate(2010, "checkup_avg");
     });
-});
-$(document).ready(function() {
     $("#dataSelectorButton6").click(function() {
-        alert("Handler for .click() called.");
+        stateMap.betterUpdate(2010, "healthcare_avg");
     });
-});
-$(document).ready(function() {
     $("#dataSelectorButton7").click(function() {
-        alert("Handler for .click() called.");
+        stateMap.betterUpdate(2010, "weight_avg");
     });
-});
-$(document).ready(function() {
     $("#dataSelectorButton8").click(function() {
-        alert("Handler for .click() called.");
+        stateMap.betterUpdate(2010, "height_avg");
     });
 });
 $(document).ready(function() {
