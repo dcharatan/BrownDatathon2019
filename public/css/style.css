@@ -1,3 +1,31 @@
+#range_top {
+    width: 20px;
+    height: 20px;
+    background-color: #394c81;
+    margin-right: 10px;
+    float: left;
+    border-radius: 4px;
+}
+#range_bottom{
+    width: 20px;
+    height: 20px;
+    background-color: #ef717a;
+    margin-right: 10px;
+    float: left;
+    border-radius: 4px;
+}
+.range_box_thing {
+    clear: left;
+}
+#range_top_text {
+    float: left;
+}
+#range_bottom_text {
+    float: left;
+}
+#qr-box {
+    margin-left: 130px;
+}
 #parent {
     display: flex;
 }
