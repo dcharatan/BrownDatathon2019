@@ -442,7 +442,7 @@ then run python -m http.server, then open localhost:8000 -->
         </div>
         <div id="container-right">
             <div class="container-inner">
-                <h1>CDC Healthcare Data in D3 and Augmented Reality</h1>
+                <h1>Animated CDC Healthcare Data in D3 and Augmented Reality</h1>
                 <p>Use the interface below to explore key fields of the CDC's BRFSS dataset. Alternatively, use the augmented reality companion app to view additional information in 3D. Information is transmitted to the mobile device using a constantly updating QR code, which contains color and height information for all 50 states.</p>
                 <div id="dataSelector">
                     <div id="dataSelectorButton1" class="dataSelectorButton">Seatbelt</div>
@@ -461,12 +461,18 @@ then run python -m http.server, then open localhost:8000 -->
                     <div class="buttonDividerThingie"></div>
                     <div id="dataSelectorButton8" class="dataSelectorButton">Height</div>
                 </div>
-                <div id="year-chart" class="view"></div>
+                <br>
+                <hr>
+                <p id="year_p">Current year: N/A</p>
                 <div id="parent">
                     <div id="playButton"></div>
                     <div id="stopButton"></div>
                     <div id="pauseButton"></div>
                 </div>
+                <br>
+                <hr>
+                <p id="description-title">Category</p>
+                <p id="description-body">A short description of the category. Pick a category to get started!</p>
             </div>
         </div>
     </div>
