@@ -1,3 +1,49 @@
+#parent {
+    display: flex;
+}
+#playButton {
+    border-style: solid;
+    border-width: 37px;
+    border-color: #202020;
+    float: right;
+    box-sizing: border-box;
+    width: 74px;
+    height: 74px;
+    border-width: 37px 0px 37px 74px;
+    border-color: transparent transparent transparent #5065a1;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 auto;
+}
+#pauseButton {
+    border-style: double;
+    border-width: 0px 0px 0px 74px;
+    border-color: #5065a1;  
+    float: left;  
+    box-sizing: border-box;
+    width: 74px;
+    height: 74px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-left: 15px;
+}
+#stopButton {
+    background-color: #5065a1;  
+    float: center;  
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+
 #dataSelector {
     background-color: #5065a1;
     height: 40px;
@@ -30,18 +76,9 @@
     user-select: none;
     cursor: pointer;
 }
-/* .dataSelectorButton:visited {
-    background-color: #7A0707;
-}
-.dataSelectorButton:focus {
-    background-color: #7A0707;
-} */
 .dataSelectorButton:hover {
     background-color: #DD3333;
 }
-/* .dataSelectorButton:active {
-    background-color: #7A0707;
-} */
 #full-screen-div {
     width: 100%;
     height: 100%;
@@ -96,6 +133,12 @@ h1 {
     font-size: 12px;
     fill: #565656;
     stroke-width: 0.1px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     /*stroke: #e5e5e5;*/
 }
 
@@ -128,16 +171,19 @@ h1 {
     fill: #de2d26;
     color: #de2d26;
     text-anchor:end;
+    cursor: pointer;
 }
 .democrat{
     fill: #3182bd;
     text-anchor:start;
     color: #3182bd;
+    cursor: pointer;
 }
 .independent{
     fill: #45AD6A;
     color: #45AD6A;
     text-anchor:start;
+    cursor: pointer;
 }
 
 .highlighted{
