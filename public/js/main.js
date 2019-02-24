@@ -18,6 +18,7 @@
         document.getElementById('container-left').style.width = (view_width - view_height) + "px";*/
 
         var stateMap = new StateMap();
+        InteractionInit(stateMap);
 
         d3.csv("data/yearwise-winner.csv", function (error, electionWinners) {
 

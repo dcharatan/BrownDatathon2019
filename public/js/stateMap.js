@@ -35,6 +35,43 @@ StateMap.prototype.chooseClass = function (party) {
     }
 }
 
+/**
+ * This is the update you want because it's the one we wrote :)))))
+ */
+StateMap.prototype.betterUpdate = function(the_year, data_column) {
+    // Reads the CSV.
+    var fileName = String("data/cdc-data.csv");
+    d3.csv(fileName, function (data) {
+        // Defines the gradient.
+        var min = null;
+        var max = null;
+        data.forEach(function (d) {
+            if(d.year == the_year) {
+                if(min == null || d[data_column] < min) {
+                    min = d[data_column];
+                }
+                if(max == null || d[data_column] > max) {
+                    max = d[data_column];
+                }
+            }
+        });
+
+        // Defines the gradient.
+        var domain = [min, max];
+        var range = ["#00FF00", "#FF0000"];
+        var colorScale = d3.scaleLinear().domain(domain).range(range);
+        
+        data.forEach(function (d) {
+            var element = document.getElementById(d.state)
+            if(element != null && d.year == the_year) {
+                console.log(d.state);
+                console.log(d.weight_avg);
+                element.setAttribute("fill", colorScale(d[data_column]));
+            }
+        });
+    });
+}
+
 StateMap.prototype.update = function (electionResult, colorScale) {
     var self = this;
 
