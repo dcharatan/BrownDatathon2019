@@ -31,18 +31,12 @@ $(document).ready(function() {
     $("#dataSelectorButton8").click(function() {
         stateMap.betterUpdate(2010, "height_avg");
     });
-});
-$(document).ready(function() {
     $("#playButton").click(function() {
         stateMap.betterUpdate();
     });
-});
-$(document).ready(function() {
     $("#pauseButton").click(function() {
         alert("pause button clicked.");
     });
-});
-$(document).ready(function() {
     $("#stopButton").click(function() {
         alert("pause button clicked.");
     });
