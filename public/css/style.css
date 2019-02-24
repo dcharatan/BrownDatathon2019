@@ -1,10 +1,43 @@
+#range_top {
+    width: 20px;
+    height: 20px;
+    background-color: #394c81;
+    margin-right: 10px;
+    float: left;
+    border-radius: 4px;
+}
+#range_bottom{
+    width: 20px;
+    height: 20px;
+    background-color: #ef717a;
+    margin-right: 10px;
+    float: left;
+    border-radius: 4px;
+}
+.range_box_thing {
+    clear: left;
+}
+#range_top_text {
+    float: left;
+}
+#range_bottom_text {
+    float: left;
+}
+#qr-box {
+    margin-left: 130px;
+}
 #parent {
     display: flex;
 }
+#description-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+#year_p {
+    font-size: 22px;
+}
 #playButton {
     border-style: solid;
-    border-width: 37px;
-    border-color: #202020;
     float: right;
     box-sizing: border-box;
     width: 74px;
@@ -77,7 +110,7 @@
     cursor: pointer;
 }
 .dataSelectorButton:hover {
-    background-color: #DD3333;
+    background-color: #3498db;
 }
 #full-screen-div {
     width: 100%;
