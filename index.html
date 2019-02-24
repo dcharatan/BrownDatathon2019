@@ -19,7 +19,6 @@ then run python -m http.server, then open localhost:8000 -->
     <div id="full-screen-div">
         <div id="container-left">
             <div class="container-inner">
-                <div id="year-chart" class="view"></div>
                 <svg version="1.1" id="state-map" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
                     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
                     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -403,6 +402,40 @@ then run python -m http.server, then open localhost:8000 -->
                 <script type="application/javascript" src="public/js/yearChart.js"></script>
                 <script type="application/javascript" src="public/js/stateMap.js"></script>
                 <script type="application/javascript" src="public/js/main.js"></script>
+                <div id="qr-box"></div>
+
+
+                <p id="output_instructions"></p>
+                <p id="heights"></p>
+                <p id="colors"></p>
+                <script type="text/javascript" src="public/js/qrcode.js"></script>
+                <script type="text/javascript" src="public/js/qr_encoder.js"></script>
+                <script>
+                    // Generates random heights and colors.
+                    var heights = [];
+                    var colors = [];
+                    for(var i = 0; i < 50; i++) {
+                        heights.push(Math.floor(Math.random() * 64));
+                        colors.push(Math.floor(Math.random() * 64));
+                    }
+                    
+                    // Adds debug.
+                    p_heights_text = "Heights: ";
+                    p_colors_text = "Colors: ";
+                    var p_heights = document.getElementById("heights");
+                    var p_colors = document.getElementById("colors");
+                    for(var i = 0; i < 50; i++) {
+                        p_heights_text += (heights[i] + " ");
+                        p_colors_text += (colors[i] + " ");
+                    }
+                    p_heights.innerHTML = p_heights_text;
+                    p_colors.innerHTML = p_colors_text;
+
+                    // Updates the QR code.
+                    update_qr_code(heights, colors, document.getElementById("qr-box"), document.getElementById("output_instructions"));
+                </script>
+
+
             </div>
         </div>
         <div id="container-right">
@@ -420,6 +453,7 @@ then run python -m http.server, then open localhost:8000 -->
                     <div id="dataSelectorButton7" class="dataSelectorButton">Obesity</div>
                     <div id="dataSelectorButton8" class="dataSelectorButton">Height</div>
                 </div>
+                <div id="year-chart" class="view"></div>
             </div>
         </div>
     </div>
