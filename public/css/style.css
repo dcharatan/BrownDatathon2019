@@ -1,3 +1,16 @@
+#dataSelector {
+    background-color: #FF0000;
+    height: 40px;
+    width: 100%;
+}
+.dataSelectorButton {
+    width: 12.5%;
+    height: 40px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+}
 #full-screen-div {
     width: 100%;
     height: 100%;
@@ -42,7 +55,6 @@ h1 {
     color: #464646;
     margin: 0px;
     padding: 0px;
-    margin-left: 20px;
 }
 .info{
     margin-left: 20px;
